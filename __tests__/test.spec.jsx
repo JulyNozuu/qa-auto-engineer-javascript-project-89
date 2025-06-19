@@ -199,5 +199,11 @@ test('Go back', async() => {
       await expect(screen.getByRole('button', {name:'Я разработчик, хочу углубить свои знания'})).toBeVisible()
 });
 
-  
-
+test('close', async() => {
+  const user = userEvent.setup()
+  render(Widget(steps))
+  let mockScroll = Element.prototype.scrollIntoView = vi.fn();
+  await user.click(screen.getByRole('button', {name: 'Открыть Чат'}))
+  await user.click(screen.getByLabelText('Close'))
+  await expect(screen.getByRole('button', {name:'Открыть Чат'})).toBeVisible()
+});
