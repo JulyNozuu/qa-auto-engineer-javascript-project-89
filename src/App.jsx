@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 import React, { useState } from 'react';
 import '@hexlet/chatbot-v2/styles'
 import ReactDOM from 'react-dom/client';
