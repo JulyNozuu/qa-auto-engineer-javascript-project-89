@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 
 import React, { useState } from 'react';
-import '@hexlet/chatbot-v2/styles';
+//import '@hexlet/chatbot-v2/styles';
 import App from '../src/App';
 import '@hexlet/chatbot-v2/styles';
 import '@testing-library/jest-dom'

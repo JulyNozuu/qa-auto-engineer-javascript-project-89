@@ -4,7 +4,7 @@
 import '@hexlet/chatbot-v2/styles'
 import Widget from '@hexlet/chatbot-v2';
 import steps from '@hexlet/chatbot-v2/example-steps';
-import '@hexlet/chatbot-v2/styles';
+//import '@hexlet/chatbot-v2/styles';
 import '@testing-library/jest-dom'
 import React from 'react'
 import {render, screen} from '@testing-library/react'
