@@ -2,11 +2,10 @@
 /* eslint-disable no-unused-vars */
 
 import React, { useState } from 'react';
-import '@hexlet/chatbot-v2/styles'
-import ReactDOM from 'react-dom/client';
+//import '@hexlet/chatbot-v2/styles'
 import Widget from '@hexlet/chatbot-v2';
 import steps from '@hexlet/chatbot-v2/example-steps';
-import '@hexlet/chatbot-v2/styles';
+//import '@hexlet/chatbot-v2/styles';
 
 const App = () => {
   const [form, setForm] = useState({
