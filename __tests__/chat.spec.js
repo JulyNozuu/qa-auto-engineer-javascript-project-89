@@ -3,13 +3,14 @@
 
 //import '@hexlet/chatbot-v2/styles'
 import Widget from '@hexlet/chatbot-v2';
-import steps from '@hexlet/chatbot-v2/example-steps';
+//import steps from '@hexlet/chatbot-v2/example-steps';
 //import '@hexlet/chatbot-v2/styles';
 import '@testing-library/jest-dom'
 import React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { test, expect } from 'vitest';
+import steps from './__fixtures__/steps';
 
 
 
