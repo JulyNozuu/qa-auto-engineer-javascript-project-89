@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-import '@hexlet/chatbot-v2/styles'
+//import '@hexlet/chatbot-v2/styles'
 import Widget from '@hexlet/chatbot-v2';
 import steps from '@hexlet/chatbot-v2/example-steps';
 //import '@hexlet/chatbot-v2/styles';
@@ -10,9 +10,7 @@ import React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { test, expect } from 'vitest';
-import '@hexlet/chatbot-v2/styles';
 import App from '../src/App';
-import '@hexlet/chatbot-v2/styles';
 import '@testing-library/jest-dom'
 
 test('chat integration', async() => {
