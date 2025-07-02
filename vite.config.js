@@ -12,12 +12,12 @@ export default defineConfig({
     server: {
       deps: {
         inline: [/@hexlet\/.*/],
-      }
+      },
     },
     deps: {
       web: {
         transformCss: true,
       },
     },
-  }
+  },
 })
