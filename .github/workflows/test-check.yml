@@ -1,4 +1,4 @@
-name: codeClimate
+name: testProject
 
 # Trigger the workflow on push or pull request
 on:
