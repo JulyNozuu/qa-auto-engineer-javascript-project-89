@@ -1,8 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-// import '@hexlet/chatbot-v2/styles'
-// import '@hexlet/chatbot-v2/styles';
 import '@testing-library/jest-dom'
 import React from 'react'
 import { render, screen } from '@testing-library/react'
