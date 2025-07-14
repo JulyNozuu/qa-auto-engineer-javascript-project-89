@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 
-// pages/ChatPage.js
+// pages/widgetPage.js
 import '@testing-library/jest-dom'
 
-export class ChatPage {
+export class WidgetPage {
   constructor(screen) {
     this.screen = screen
   }

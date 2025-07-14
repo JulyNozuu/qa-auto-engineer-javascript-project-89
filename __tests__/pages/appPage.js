@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-// pages/AuthorizationPage.js
-export class AuthorizationPage {
+// pages/appPage.js
+export class AppPage {
   constructor(screen) {
     this.screen = screen
     this.inputEmail = this.screen.getByPlaceholderText('Email')
