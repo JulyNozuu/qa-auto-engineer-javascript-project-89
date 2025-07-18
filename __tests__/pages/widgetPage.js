@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+import { expect } from 'vitest'
+import textConst from '../__fixtures__/textsConst'
 
 // pages/widgetPage.js
 import '@testing-library/jest-dom'
@@ -8,226 +9,173 @@ export class WidgetPage {
     this.screen = screen
   }
 
-  // Проверить наличие кнопки "Открыть Чат"
-  async checkOpenChatButton() {
-    await expect(this.screen.getByRole('button', { name: 'Открыть Чат' }))
+  checkOpenChatButton() {
+    expect(this.screen.getByRole('button', { name: textConst.openChatButton }))
   }
 
-  // Кликнуть на кнопку "Открыть Чат"
   async clickOpenChatButton(user) {
-    await user.click(this.screen.getByRole('button', { name: 'Открыть Чат' }))
-  }
-
-  // Проверить наличие кнопки "Начать разговор"
-  async checkStartСonversationButton() {
-    await expect(this.screen.getByRole('button', { name: 'Начать разговор' }))
-  }
-
-  // Кликнуть на кнопку "Начать разговор"
-  async clickStartСonversationButton(user) {
     await user.click(
-      this.screen.getByRole('button', { name: 'Начать разговор' }),
+      this.screen.getByRole('button', { name: textConst.openChatButton }),
     )
   }
 
-  // Проверить наличие кнопки "Сменить профессию или трудоустроиться"
-  async checkChangeProfessionButton() {
-    await expect(
+  checkStartConversationButton() {
+    expect(
       this.screen.getByRole('button', {
-        name: 'Сменить профессию или трудоустроиться',
+        name: textConst.startConversationButton,
       }),
     )
   }
 
-  // Кликнуть на кнопку "Сменить профессию или трудоустроиться"
+  async clickStartConversationButton(user) {
+    await user.click(
+      this.screen.getByRole('button', {
+        name: textConst.startConversationButton,
+      }),
+    )
+  }
+
+  checkChangeProfessionButton() {
+    expect(
+      this.screen.getByRole('button', {
+        name: textConst.changeProfessionButton,
+      }),
+    )
+  }
+
   async clickChangeProfessionButton(user) {
     await user.click(
       this.screen.getByRole('button', {
-        name: 'Сменить профессию или трудоустроиться',
+        name: textConst.changeProfessionButton,
       }),
     )
   }
 
-  // Проверить наличие кнопки "Попробовать себя в IT"
-  async checkTryITButton() {
-    await expect(
-      this.screen.getByRole('button', { name: 'Попробовать себя в IT' }),
-    )
+  checkTryITButton() {
+    expect(this.screen.getByRole('button', { name: textConst.tryITButton }))
   }
 
-  // Кликнуть на кнопку "Попробовать себя в IT"
   async clickTryITButton(user) {
     await user.click(
+      this.screen.getByRole('button', { name: textConst.tryITButton }),
+    )
+  }
+
+  checkDeveloperButton() {
+    expect(
       this.screen.getByRole('button', {
-        name: 'Попробовать себя в IT',
+        name: textConst.developerButton,
       }),
     )
   }
 
-  // Проверить наличие кнопки "Я разработчик, хочу углубить свои знания"
-  async checkDeveloperButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'Я разработчик, хочу углубить свои знания',
-      }),
-    )
-  }
-
-  // Кликнуть на кнопку "Я разработчик, хочу углубить свои знания"
   async clickDeveloperButton(user) {
     await user.click(
       this.screen.getByRole('button', {
-        name: 'Я разработчик, хочу углубить свои знания',
+        name: textConst.developerButton,
       }),
     )
   }
 
-  // Проверить наличие кнопки "Расскажи подробнее"
-  async checkTellMoreButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'Расскажи подробнее',
-      }),
-    )
+  checkTellMoreButton() {
+    expect(this.screen.getByRole('button', { name: textConst.tellMoreButton }))
   }
 
-  // Кликнуть на кнопку "Расскажи подробнее"
   async clickTellMoreButton(user) {
     await user.click(
-      this.screen.getByRole('button', {
-        name: 'Расскажи подробнее',
-      }),
+      this.screen.getByRole('button', { name: textConst.tellMoreButton }),
     )
   }
 
-  // Проверить наличие кнопки "А есть что-нибудь попроще"
-  async checkSimplerButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'А есть что-нибудь попроще',
-      }),
+  checkSimplerButton() {
+    expect(
+      this.screen.getByRole('button', { name: 'А есть что-нибудь попроще' }),
     )
   }
 
-  // Кликнуть на кнопку "А есть что-нибудь попроще"
   async clickSimplerButton(user) {
     await user.click(
-      this.screen.getByRole('button', {
-        name: 'А есть что-нибудь попроще',
-      }),
+      this.screen.getByRole('button', { name: textConst.simplerButton }),
     )
   }
 
-  // Проверить наличие кнопки "Вернуться в начало"
-  async checkBackButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'Вернуться в начало',
-      }),
-    )
+  checkBackButton() {
+    expect(this.screen.getByRole('button', { name: textConst.backButton }))
   }
 
-  // Кликнуть на кнопку "Вернуться в начало"
   async clickBackButton(user) {
     await user.click(
-      this.screen.getByRole('button', {
-        name: 'Вернуться в начало',
-      }),
+      this.screen.getByRole('button', { name: textConst.backButton }),
     )
   }
 
-  // Проверить наличие кнопки "Интересно"
-  async checkInterstingButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'Интересно',
-      }),
+  checkInterestingButton() {
+    expect(
+      this.screen.getByRole('button', { name: textConst.interestingButton }),
     )
   }
 
-  // Кликнуть на кнопку "Интересно"
-  async clickInterstingButton(user) {
+  async clickInterestingButton(user) {
     await user.click(
+      this.screen.getByRole('button', { name: textConst.interestingButton }),
+    )
+  }
+
+  checkAboutChangingProfessionsButton() {
+    expect(
       this.screen.getByRole('button', {
-        name: 'Интересно',
+        name: textConst.aboutChangingProfessionsButton,
       }),
     )
   }
 
-  // Проверить наличие кнопки "А что по поводу смены профессии?"
-  async checkAboutChangingProfessionsButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'А что по поводу смены профессии?',
-      }),
-    )
-  }
-
-  // Кликнуть на кнопку "А что по поводу смены профессии?"
   async clickAboutChangingProfessionsButton(user) {
     await user.click(
       this.screen.getByRole('button', {
-        name: 'А что по поводу смены профессии?',
+        name: textConst.aboutChangingProfessionsButton,
       }),
     )
   }
 
-  // Проверить наличие кнопки "Вернуться назад"
-  async checkGoBackButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'Вернуться назад',
-      }),
-    )
+  checkGoBackButton() {
+    expect(this.screen.getByRole('button', { name: textConst.goBackButton }))
   }
 
-  // Кликнуть на кнопку "Вернуться назад"
   async clickGoBackButton(user) {
     await user.click(
-      this.screen.getByRole('button', {
-        name: 'Вернуться назад',
-      }),
+      this.screen.getByRole('button', { name: textConst.goBackButton }),
     )
   }
 
-  // Проверить наличие кнопки "Верни меня в начало"
-  async checTakeMeBackButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'Верни меня в начало',
-      }),
+  checkTakeMeBackButton() {
+    expect(
+      this.screen.getByRole('button', { name: textConst.takeMeBackButton }),
     )
   }
 
-  // Кликнуть на кнопку "Верни меня в начало"
   async clickTakeMeBackButton(user) {
     await user.click(
+      this.screen.getByRole('button', { name: textConst.takeMeBackButton }),
+    )
+  }
+
+  checkStayHereButton() {
+    expect(
       this.screen.getByRole('button', {
-        name: 'Верни меня в начало',
+        name: textConst.stayHereButton,
       }),
     )
   }
 
-  // Проверить наличие кнопки "Останусь здесь, запишусь на курс"
-  async checStayHereButton() {
-    await expect(
-      this.screen.getByRole('button', {
-        name: 'Останусь здесь, запишусь на курс',
-      }),
-    )
-  }
-
-  // Кликнуть на кнопку "Останусь здесь, запишусь на курс"
   async clickStayHereButton(user) {
     await user.click(
       this.screen.getByRole('button', {
-        name: 'Останусь здесь, запишусь на курс',
+        name: textConst.stayHereButton,
       }),
     )
   }
 
-  // Кликнуть на кнопку "Close"
   async clickCloseButton(user) {
-    await user.click(this.screen.getByLabelText('Close'))
+    await user.click(this.screen.getByLabelText(textConst.closeButton))
   }
 }

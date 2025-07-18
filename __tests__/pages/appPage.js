@@ -1,13 +1,16 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-
 // pages/appPage.js
+
+import { expect } from 'vitest'
+import textConst from '../__fixtures__/textsConst'
+
 export class AppPage {
   constructor(screen) {
     this.screen = screen
     this.inputEmail = this.screen.getByPlaceholderText('Email')
-    this.inputPass = this.screen.getByPlaceholderText('Пароль')
-    this.inputAdres = this.screen.getByPlaceholderText('Невский проспект, 12')
+    this.inputPassword = this.screen.getByPlaceholderText('Пароль')
+    this.inputAddress = this.screen.getByPlaceholderText(
+      'Невский проспект, 12',
+    )
     this.inputCity = this.screen.getByLabelText('Город')
     this.selectCountry = this.screen.getByLabelText('Страна')
     this.checkbox = this.screen.getByRole('checkbox', {
@@ -15,57 +18,49 @@ export class AppPage {
     })
   }
 
-  // Заполнить Email
   async inputEmailField(user, query) {
     await user.type(this.inputEmail, query)
   }
 
-  // Заполнить Пароль
   async inputPassField(user, query) {
-    await user.type(this.inputPass, query)
+    await user.type(this.inputPassword, query)
   }
 
-  // Заполнить Адрес
   async inputAdresField(user, query) {
-    await user.type(this.inputAdres, query)
+    await user.type(this.inputAddress, query)
   }
 
-  // Заполнить Город
   async inputCityField(user, query) {
     await user.type(this.inputCity, query)
   }
 
-  // Выбрать Страна
   async selectCountryField(user, query) {
     await user.selectOptions(this.selectCountry, query)
   }
 
-  // Проставить чек-бокс "Принять правила"
-  async selectcheckboxField(user, query) {
+  async selectCheckboxField(user) {
     await user.click(this.checkbox)
   }
 
-  // Проверить наличие кнопки "Зарегистрироваться"
-  async checkRegisterButton() {
-    await expect(
-      this.screen.getByRole('button', { name: 'Зарегистрироваться' }),
+  checkRegisterButton() {
+    expect(
+      this.screen.getByRole('button', { name: textConst.registrationButton }),
     )
   }
 
-  // Нажать кнопку "Зарегистрироваться"
   async clickRegisterButton(user) {
     await user.click(
-      this.screen.getByRole('button', { name: 'Зарегистрироваться' }),
+      this.screen.getByRole('button', { name: textConst.registrationButton }),
     )
   }
 
-  // Проверить наличие кнопки "Назад"
-  async checkBackButton() {
-    await expect(this.screen.getByRole('button', { name: 'Назад' }))
+  checkBackButton() {
+    expect(this.screen.getByRole('button', { name: textConst.backButtonApp }))
   }
 
-  // Кликнуть на кнопку "Назад"
   async clickBackButton(user) {
-    await user.click(this.screen.getByRole('button', { name: 'Назад' }))
+    await user.click(
+      this.screen.getByRole('button', { name: textConst.backButtonApp }),
+    )
   }
 }
